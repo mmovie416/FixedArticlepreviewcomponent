@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+        <section class="leftcontent">
+            <img  src="images/drawers.jpg" alt="drawers">
+        </section>
+
+        <div class="rightcontent">
+          <div class="isi">
+              <div class="tittle">
+                <h3>Shift the overall look and feel by adding these wonderful 
+                touches to furniture in your home</h3>
+              <p class="paragraf">Ever been in a room and felt like something was missing? Perhaps 
+              it felt slightly bare and uninviting. I’ve got some simple tips 
+              to help you make any room feel complete.</p>
+              </div>
+              
+              
+                <div class="picture">
+                  
+                  <div class="left">
+                    <img src="images/avatar-michelle.jpg" width="61" height="61" alt="Michelle">  
+                  </div>
+
+                  <div class="right">
+                    <p style="font-weight: bold;">Michelle Appleton</p>
+                    <p>28 Jun 2020</p>  
+                  </div>
+
+                  <p class="share" onclick="toggle()"> <img src="images/share-icon.svg" width="45" height="35"  alt="share-icon"> </p>
+                     
+                </div>
+              
+          </div>
+
+          <div class="shareSection" style="visibility: hidden;">
+            <div class="iconSocial bottom">
+              <p class="textShare">SHARE</p>
+              <div class="iconimg">
+                <img class="img1" src="images/icon-facebook.svg" alt="facebook">
+                <img class="img2" src="images/icon-twitter.svg" alt="twitter">
+                <img class="img3" src="images/icon-pinterest.svg" alt="pinterest">
+              </div>
+            </div>
+          </div>
+          
+           
+        </div>
+    </div> 
+  
+  </div>
+
+  
+  <script>
+    let a = false;
+
+      
+      // sharee.addEventListener('click',function(){
+      //     bubbleText.style.visibility ='visible';
+      // });
+
+      function toggle(){
+        let bubbleText = document.querySelector('.shareSection');
+        let sharee = document.querySelector('.share');
+        a=!a;  
+
+        if(a){
+          sharee.classList.add('b');
+          bubbleText.style.visibility ='visible';
+        }else{
+          sharee.classList.remove('b');
+          bubbleText.style.visibility ='hidden';
+        }
+
+      }
+  </script>
+</body>
+</html>
